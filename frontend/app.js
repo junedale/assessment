@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session');
 
+require('dotenv').config();
+
 var indexRouter = require('./routes/index');
 
 var app = express();
@@ -15,7 +17,7 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(session({
-  secret : 'secret',
+  secret : process.env.SESSION_SECRET,
   resave : false,
   saveUninitialized : false
 }))
