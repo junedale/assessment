@@ -8,7 +8,7 @@ block content
                     input(type='text' class='form-control' placeholder='Enter a text' name='anytext')
                     button(class='btn btn-primary', type='submit') Submit
                 div(class='dropdown mb-3')
-                    button(class='btn btn-secondary dropdown-toggle', type='button', id='dropdownMenuButton1', data-bs-toggle='dropdown') Dropdown button
+                    button(class='btn btn-secondary dropdown-toggle', type='button', id='dropdownMenuButton1', data-bs-toggle='dropdown') Past queries
                     ul(class='dropdown-menu', aria-labelledby='dropdownMenuButton1')
                         if queries 
                             each query in queries
@@ -18,7 +18,5 @@ block content
                             li(class='dropdown-item') No queries yet
                 div(class='d-flex gap-2 flex-grow-1 flex-wrap')
                     if data 
-                        pre(class='p-3 border w-100 overflow-y-auto', style='height: 500px; min-height: inherit; max-height: 500px; white-space: pre-wrap;') #{JSON.stringify(data.original)}
-                    div(class='p-3 border w-100', style='height: 500px; min-height: inherit; max-height: 500px; white-space: pre-wrap;')
-                        if data 
-                            pre(class='p-3 border w-100 overflow-y-auto', style='height: 500px; min-height: inherit; max-height: 500px; white-space: pre-wrap;') #{JSON.stringify(data.transformed)}
+                        pre(class='p-3 border w-100 overflow-y-auto', style='height: 500px; min-height: inherit; max-height: 500px; white-space: pre-wrap;') #{JSON.stringify(data.original)} 
+                        pre(class='p-3 border w-100 overflow-y-auto', style='height: 500px; min-height: inherit; max-height: 500px; white-space: pre-wrap;') #{JSON.stringify(data.transformed)}
